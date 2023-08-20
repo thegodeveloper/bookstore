@@ -17,3 +17,20 @@ Use this profile to generate an HTML page showing the covered code highlighted i
 ```commandline
 go tool cover -html=coverage.out
 ```
+
+Check coverage check:
+
+```commandline
+go test -cover                                                                           ─╯
+PASS
+coverage: 75.0% of statements
+ok      github.com/thegodeveloper/bookstore     0.473s
+```
+
+That means `75%` of the code is untested.
+
+So, run the profile and generate the HTML report again. You should see:
+
+```go
+return Book{}, errors.New("no copies left")
+```
